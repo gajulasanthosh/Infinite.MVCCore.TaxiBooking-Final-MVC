@@ -1,0 +1,40 @@
+﻿@{
+    ViewData["Title"] = "Landing";
+} 
+<style>
+        .bd {
+                border-radius: 10px;
+                width: 300px;
+                height: 250px;
+
+    }
+
+        .btn {
+                margin-left:15px;
+                width:270px;
+
+    }
+</style>
+<body class="body">
+    <h1 class="text-white offset-5 pt-4">Landing</h1>
+    <div class="row offset-2 pt-5 ">
+        <div class=" col border-dark ">
+        <div class="col">
+            <img src="https://www.drzimmerman.com/wp-content/uploads/2016/07/Employee-Engagement-Icon-Image-1400x800-862x493.png" class="bd w-90 " />
+            </div>
+        <br />
+        <div class=" col">
+            <a asp-controller="Bookings" asp-action="index" class="btn btn-danger">Booking Details</a>
+            </div>
+            </div>
+        <div class=" col border-dark">
+        <div class="col">
+            <img src="https://www.drzimmerman.com/wp-content/uploads/2016/07/Employee-Engagement-Icon-Image-1400x800-862x493.png" class="bd w-90" />
+            </div>
+        <br />
+        <div class=" col">
+            <a asp-controller="EmployeeRosters" asp-action="Index" class="btn btn-danger ">Employee Roster Details</a>
+            </div>
+        </div>
+    </div>
+</body>

@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+<style>
+    .bd {
+        border-radius: 10px;
+        width: 300px;
+        height: 250px;
+    }
+
+    .btn {
+        margin-left: 25px;
+        padding-left: 10px;
+        width: 250px;
+    }
+</style>
+<body class="body">
+    <h1 class="text-white pt-4">Index</h1>
+    <div class="row  pt-5">
+        <div class="border-dark ">
+            <div class="col">
+                <img src="https://c8.alamy.com/comp/MDG4KT/customers-flat-design-orange-round-vector-icon-in-eps-10-MDG4KT.jpg" class="bd w-90 " />
+            </div>
+            <br />
+            <div class="col">
+                <a asp-controller="Admin" asp-action="Customers" class="btn btn-danger">Customer Details</a>
+            </div>
+        </div>
+        <div class="col border-dark pt-3">
+            <div class="col">
+                <img src="https://www.drzimmerman.com/wp-content/uploads/2016/07/Employee-Engagement-Icon-Image-1400x800-862x493.png" class="bd w-90" />
+            </div>
+            <br />
+            <div class="col">
+                <a asp-controller="Admin" asp-action="Employees" class="btn btn-danger ">Employee Details</a>
+            </div>
+        </div>
+        <div class="col border-dark pt-3">
+            <div class="col">
+                <img src="https://www.drzimmerman.com/wp-content/uploads/2016/07/Employee-Engagement-Icon-Image-1400x800-862x493.png" class="bd w-90 " />
+            </div>
+            <br />
+            <div class="col">
+                <a asp-controller="Admin" asp-action="EmployeeRoster" class="btn btn-danger">EmployeeRoster Details</a>
+            </div>
+        </div>
+        <div class="col border-dark pt-3">
+            <div class="col">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/75380191982257.5e400eb2bf4b4.jpg " class="bd w-90 " />
+            </div>
+            <br />
+            <div class="col">
+                <a asp-controller="Feedback" asp-action="Index" class="btn btn-danger">Feedbacks</a>
+            </div>
+        </div>
+    </div>
+</body>

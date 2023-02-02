@@ -1,0 +1,31 @@
+﻿@model IEnumerable<FeedbackViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>FeedBacks</h1> 
+<div class="row">
+    <div class="col-md-5">
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <td>Id</td>
+                <td>Feedback</td>
+                </tr>
+            </thead>  
+            <tbody>
+
+                @foreach (var i in Model)
+                {
+                <tr>
+                    <td>@i.id</td>
+                    <td>@i.feedback</td>
+                </tr>
+                        }
+                    
+                </tbody>
+        </table>
+        <a class="btn btn-primary" asp-action="Index" asp-controller="Admin">Go Back</a>
+    </div>
+</div>
+

@@ -1,0 +1,45 @@
+﻿@model IEnumerable<BookingViewModel>
+@{
+    ViewData["Title"] = "Index";
+}
+<body>
+    <div class="row pt-5 offset-1 w-100">
+        <div class="col-md-7">
+            <div class="row">
+                <div class="col">
+                    <h2> List Of Bookings</h2>
+                </div>
+                <div class="col text-end">
+                    <a asp-controller="Bookings" asp-action="Create" class="btn btn-primary">Create a new Booking</a>
+                </div>
+            </div>
+            <table class="table table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th>Booking Id</th>
+                        <th>Customer Name</th>
+                        @*<th>Customer Id</th>*@
+                        <th>Action</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    @foreach (var x in Model)
+                    {
+                        <tr>
+                            <td>@x.BookingId</td>
+                            <td>@x.CustomerName</td>
+                            @*<td>@x.CustomerID</td>*@
+                            <td><a asp-controller="Bookings" asp-action="Details" asp-route-id="@x.BookingId">Details</a></td>
+                            @*<td><a asp-controller="Bookings" asp-action="AcceptBooking" asp-route-id="@x.BookingId">Accept</a></td>
+                            <td><a asp-controller="Bookings" asp-action="RejectBooking" asp-route-id="@x.BookingId">Reject</a></td>*@
+                            <td>@x.Status</td>
+
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>

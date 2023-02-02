@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Landing";
+} 
+<style>
+        .bd {
+                border-radius: 10px;
+                width: 300px;
+                height: 250px;
+
+    }
+
+         /*.btn {
+        width: 270px;
+    }*/
+</style>
+<body class="body">
+    <h1 class="text-white offset-5 pt-4">Home </h1>
+    <a asp-controller="Customers" asp-action="Create" class="btn btn-danger">Profile</a>
+    <p>Add your details in Profile Section before booking a Taxi</p>
+    <div class="row offset-2 pt-5 ">
+        <div class=" col border-dark ">
+
+            <div class="col">
+                <img src="https://oversixtydev.blob.core.windows.net/media/12917/hotel-booking-tips.jpg" class="bd w-90" />
+            </div>
+            <br />
+            <div class="col offset-2">
+                <a asp-controller="Bookings" asp-action="Create" class="btn btn-danger">New Bookings</a>
+            </div>
+        </div>
+        <div class="col border-dark">
+            <div class="col">
+                <img src="https://oversixtydev.blob.core.windows.net/media/12917/hotel-booking-tips.jpg" class="bd w-90" />
+            </div>
+            <br />
+            <div class="col offset-2">
+                <a asp-controller="Bookings" asp-action="index" class="btn btn-danger ">Booking History</a>
+            </div>
+        </div>
+    </div>
+</body>

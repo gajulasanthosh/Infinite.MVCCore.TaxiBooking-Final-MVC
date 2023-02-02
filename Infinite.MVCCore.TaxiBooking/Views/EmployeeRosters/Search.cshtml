@@ -1,0 +1,41 @@
+﻿@model IEnumerable<EmployeeRosterViewModel>
+@{
+    ViewData["Title"] = "Search";
+} <h1>Search</h1> <div class="row">
+    <div class="col-md-6">
+        <form asp-controller="EmployeeRosters" asp-action="Search" method="get">
+        <input type="text" name="employeeName" />
+        <button type="submit" value="Submit">Submit</button>
+            </form> 
+        @if (Model != null)
+        {
+            @if (Model.Count() > 0)
+            {<table class="table table-bordered">
+                    <thead>
+        <tr>
+                        <th>Id </th>
+                        <th> FromDate </th>
+                        <th>ToDate </th>
+                        <th>InTime </th>
+                        <th>OutTime</th>
+            </tr>
+                    </thead>                    
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                        <td>@item.Id</td>
+                        <td>@item.FromDate</td>
+                        <td>@item.ToDate</td>
+                        <td>@item.InTime</td>
+                        <td>@item.OutTime</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table> }
+            else
+            {<label>No Data Found</label>
+            }
+        }
+    </div>
+</div>
